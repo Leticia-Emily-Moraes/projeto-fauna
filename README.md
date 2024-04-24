@@ -35,17 +35,17 @@ Para instalar é necessario entrar na apple store ou na play store, procurar pel
 Começamos nosso desing no [Figma](https://www.figma.com/filFe/l4GnwwPOZPRQvypkhLWgmv/Projeto-Fauna?type=design&node-id=2%3A22&mode=design&t=pJMiV6LDq6iapMza-1)  
 
 ## Documentação das cores:  
-|Cor  | Hexadecimal
-------| ----------
-
-
-
-1. 537552  
-2. BAD9A2  
-3. 824F0D  
-4. F5BD63  
-5. 008DC4  
-6. 00524B  
+|Cor    | Hexadecimal
+------  | ----------
+|Verde |#537552 
+|Verde muito suave | #BAD9A2
+|Verde ciano-limão escuro |#824F0D 
+|Laranja vivo |#F5BD63 
+|Azul forte | #008dc4 
+|Ciano muito escuro |#00524b
+ 
+   
+ 
 
 ## Pesquisa de campo 
 Pesquisa realizada para obter informações diretamente com o publico alvo  [Pesquisa de campo](https://forms.office.com/r/3vrENfZByp)
