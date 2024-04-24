@@ -19,16 +19,27 @@ O principal brainstorm foi feito no [Mindmeister](https://mm.tt/app/map/31886091
 [] Pre apresentação  
 [] Apresentação    
 
+## Funcionalidades implementadas: 
+
+
 ## Como instalar 
 Para instalar é necessario entrar na apple store ou na play store, procurar pelo nome do projeto e instalar
 
-## Linguagens utilizadas
+## Tecnologias ultilizadas:
 * HTML,CSS e Javascript  
 * React.Js  
 
+## Tipografia:
+
 ## Desing
 Começamos nosso desing no [Figma](https://www.figma.com/filFe/l4GnwwPOZPRQvypkhLWgmv/Projeto-Fauna?type=design&node-id=2%3A22&mode=design&t=pJMiV6LDq6iapMza-1)  
-Utilizamos as seguintes cores:   
+
+## Documentação das cores:  
+|Cor  | Hexadecimal
+------| ----------
+
+
+
 1. 537552  
 2. BAD9A2  
 3. 824F0D  
@@ -37,7 +48,7 @@ Utilizamos as seguintes cores:
 6. 00524B  
 
 ## Pesquisa de campo 
-é necesaario acessar um link par apoder visualizar e responder [Pesquisa](https://forms.office.com/r/3vrENfZByp)
+Pesquisa realizada para obter informações diretamente com o publico alvo  [Pesquisa de campo](https://forms.office.com/r/3vrENfZByp)
 
 ## Equipe
 Camily Vitória da Silva Dias   
