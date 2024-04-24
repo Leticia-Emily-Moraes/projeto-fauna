@@ -1,5 +1,8 @@
-# Projeto FaunABC
+
 ![fauna] (imagem/photo)
+
+
+# Projeto FaunABC
 
 
 Este é um trabalho de conclusão de curso (TCC) tendo como objetivo informar sobre uma aplicação para celulares, com intuito de auxiliar, alertar e informar moradores munícipios do ABC Paulista perante a recorrente aparição de fauna em regiões urbanas, assim causando uma relação conflituosa entre animais silvestres, insetos e seres humanos. Entende-se que certos animais e insetos que “invadem” as residências possam causar uma certa desconfiança e medo na população, trazendo a dúvida do que fazer com o animal/inseto. Logo, a aplicação do sistema se perpetua enquanto fornece conhecimento e ajuda aos cidadãos para a preservação da vida e da paz, sendo que o aplicativo possui funcionalidades como: acesso a mapa e localização de ocorrências, telefones emergenciais, fixa técnica de animais, identificação de possíveis bichos peçonhento, aba comunicativa entre os usuários, a exibição de contato de profissionais da segurança caso o usuário se encontre em situações de perigo ou risco e disponibiliza informações sobre espécies recorrentes presentes em áreas residenciais e/ou comerciais.
