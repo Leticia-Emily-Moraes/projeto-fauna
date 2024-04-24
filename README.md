@@ -1,4 +1,4 @@
-# Projeto Fauna
+# Projeto FaunABC
 ![fauna] (imagem/photo)
 > Projeto de conclusão de curso (TCC) para o tecnico em Desenvolvimento de Sistemas integrado ao ensino medio
 ## Brainstorm
@@ -7,13 +7,13 @@ O principal brainstorm foi feito no [Mindmeister](https://mm.tt/app/map/31886091
 
 ## Tarefas
 
-[] Pesquisa de campo  
-[] Logo   
-[] Mapa mental  
+[X] Pesquisa de campo  
+[X] Logo   
+[X] Mapa mental  
 [] Documentação   
-[] Palheta de cor  
+[X] Palheta de cor  
 [] Designe pelo figma  
-[] Analise SWOT  
+[X] Analise SWOT  
 [] Programação   
 [] Slides de apresentação  
 [] Pre apresentação  
@@ -36,9 +36,10 @@ Utilizamos as seguintes cores:
 5. 008DC4  
 6. 00524B  
 
+## Pesquisa de campo 
+é necesaario acessar um link par apoder visualizar e responder [Pesquisa](https://forms.office.com/r/3vrENfZByp)
 
-
-## Equipes
+## Equipe
 Camily Vitória da Silva Dias   
 Gabriella Silva Alvarenga  
 Leticia Emily Moraes  
