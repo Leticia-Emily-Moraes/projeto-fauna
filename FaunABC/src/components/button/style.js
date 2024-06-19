@@ -1,10 +1,9 @@
 import styled from "styled-components/native";
-import { useFonts, Inter_400Regular } from '@expo-google-fonts/inter';
 
 export const ButtonPrincipal = styled.TouchableOpacity`
   display: flex;
-  width: 80%;
-  height: 50px;
+  width: 100%;
+  height: 30px;
   padding: 3px 22px;
   justify-content: center;
   align-items: center;
