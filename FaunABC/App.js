@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import * as Font from 'expo-font';
-import Button from './src/components/button';
+import PrimeiraPagina from './src/pages/primeiraPagina'
 
 export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
@@ -23,9 +23,7 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Button title="Clique em mim"/>
-    </View>
+    <PrimeiraPagina></PrimeiraPagina>
   );
 }
 
