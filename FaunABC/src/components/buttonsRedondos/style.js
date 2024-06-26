@@ -4,7 +4,7 @@ export const ButtonsRedondos = styled.TouchableOpacity`
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  border: 2px solid #537552;
+  border: 2px solid ${(props) => props.theme.colors.borderColor};
   display: flex;
   justify-content: center;
   align-items: center;
