@@ -4,7 +4,7 @@ export const Container = styled.View`
   height: 100%;
   width: 100%;
   padding: 25px 10px;
-  background-color: #f5fdee;
+  background-color: ${(props) => props.theme.colors.bg};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,6 +28,7 @@ export const ContainerEntrarCom = styled.View`
   gap: 10px;
   width: 80%;
 `;
+
 export const ContainerButtonsEntrarCom = styled.View`
   display: flex;
   flex-direction: row;
@@ -38,7 +39,7 @@ export const ContainerButtonsEntrarCom = styled.View`
 `;
 
 export const TextoNormal = styled.Text`
-  color: #00524b;
+  color: ${(props) => props.theme.colors.text};
   font-family: "Inter-Bold";
   font-size: 16px;
 `;

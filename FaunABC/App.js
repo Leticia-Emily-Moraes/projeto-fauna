@@ -1,37 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import * as Font from 'expo-font';
-import PrimeiraPagina from './src/pages/primeiraPagina'
+import React from "react";
+import { ThemeProvider as StyledThemeProvider } from "styled-components/native";
+import { ProvedorFonte, UseFonte } from "./src/context/fontContext";
+import { Container, LoadingContainer } from "./style";
+import PrimeiraPagina from "./src/pages/primeiraPagina";
+import { ThemeProvider, useTheme } from "./src/context/themeContext";
 
 export default function App() {
-  const [fontLoaded, setFontLoaded] = useState(false);
-
-  useEffect(() => {
-    const loadFonts = async () => {
-      await Font.loadAsync({
-        'Inter-Regular': require('./assets/fonts/inter/Inter-Regular.ttf'),
-        'Inter-Bold': require('./assets/fonts/inter/Inter-Bold.ttf')
-      });
-      setFontLoaded(true);
-    };
-
-    loadFonts();
-  }, []);
-
-  if (!fontLoaded) {
-    return null; // Ou um componente de carregamento
-  }
-
   return (
-    <PrimeiraPagina></PrimeiraPagina>
+    <ThemeProvider>
+      <ProvedorFonte>
+        <MainApp />
+      </ProvedorFonte>
+    </ThemeProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-});
+const MainApp = () => {
+  const { fonteCarregada } = UseFonte();
+  const { theme } = useTheme();
+
+  if (!fonteCarregada) {
+    return <LoadingContainer />;
+  }
+
+  return (
+    <StyledThemeProvider theme={theme}>
+      <Container>
+        <PrimeiraPagina />
+      </Container>
+    </StyledThemeProvider>
+  );
+};

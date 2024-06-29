@@ -9,11 +9,11 @@ export const ButtonPrincipal = styled.TouchableOpacity`
   align-items: center;
   gap: 10.4px;
   border-radius: 15px;
-  background-color: #537552;
+  background-color: ${(props) => props.theme.colors.bgButton};
 `;
 
 export const ButtonText = styled.Text`
-  color: #bad9a2;
+  color: ${(props) => props.theme.colors.textButton};
   font-family:'Inter-Bold';
   font-size: 14px;
 `;
