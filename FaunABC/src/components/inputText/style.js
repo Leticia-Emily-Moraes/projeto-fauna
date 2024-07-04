@@ -17,6 +17,12 @@ export const Label = styled.Text`
     align-self: flex-start;
 `;
 
+export const TextError = styled.Text`
+    color: red;
+    font-family: 'Inter-Regular';
+    font-size: 16px;
+`;
+
 export const Input = styled.TextInput`
     background-color: ${(props) => props.theme.colors.bgInput};
     width: 100%;
