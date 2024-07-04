@@ -2,20 +2,28 @@ import React, { useState } from "react";
 import { Container, Input, Label, TextError } from "./style";
 
 function InputEmail({
-    TituloDoInput = "Email",
-    placeholder = "DIgite seu email",
+    TituloDoInput = "Email:",
+    placeholder = "Digite seu email",
     value = "",
     onChangeText = () => {},
     ...props
 }) {
     const [email, setEmail] = useState(value);
     const [isValid, setIsValid] = useState(true);
+    const [message, setMessage] = useState("");
 
     const validateEmail = (email) => {
         if (email.length > 0) {
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
+            if (!emailPattern.test(email)) {
+                setMessage("Email inválido");
+                return false;
+            } else {
+                setMessage("");
+                return true;
+            }
         } else {
+            setMessage("Preencha o campo");
             return false;
         }
     };
@@ -36,7 +44,7 @@ function InputEmail({
                 isValid={isValid}
                 {...props}
             />
-            {!isValid && <TextError>Email inválido</TextError>}
+            {!isValid && <TextError>{message}</TextError>}
         </Container>
     );
 }
