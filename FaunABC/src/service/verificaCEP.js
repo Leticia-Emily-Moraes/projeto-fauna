@@ -1,8 +1,8 @@
-import { Axios } from "axios";
+import axios from 'axios';
 
 const getAddress = async (cep) => {
     try {
-        const response = await Axios.get(
+        const response = await axios.get(
             `https://viacep.com.br/ws/${cep}/json/`
         );
         if (response.data.erro) {

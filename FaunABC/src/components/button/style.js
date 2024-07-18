@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const ButtonPrincipal = styled.TouchableOpacity`
   display: flex;
-  width: 100%;
+  min-width: 40%;
   height: 30px;
   padding: 3px 22px;
   justify-content: center;

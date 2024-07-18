@@ -1,7 +1,7 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import PrimeiraPagina from "../pages/primeiraPagina";
-import CadastroUser from "../pages/cadastroUser";
+import CadastroUser from "../pages/cadastroDadosUser";
 
 const Stack = createNativeStackNavigator();
 
