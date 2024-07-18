@@ -1,5 +1,3 @@
-import { Feather } from "@expo/vector-icons";
-
 export const lightTheme = {
   colors: {
     bg: "#F5FDEE",

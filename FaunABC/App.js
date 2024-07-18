@@ -1,33 +1,42 @@
-import React from "react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components/native";
-import { ProvedorFonte, UseFonte } from "./src/context/fontContext";
-import { Container, LoadingContainer } from "./style";
-import PrimeiraPagina from "./src/pages/primeiraPagina";
-import { ThemeProvider, useTheme } from "./src/context/themeContext";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Text, View, Button } from 'react-native';
+import 'react-native-gesture-handler';
 
-export default function App() {
+
+// Criei essa tela de exemplo
+function HomeScreen({ navigation }) {
   return (
-    <ThemeProvider>
-      <ProvedorFonte>
-        <MainApp />
-      </ProvedorFonte>
-    </ThemeProvider>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+    </View>
   );
 }
 
-const MainApp = () => {
-  const { fonteCarregada } = UseFonte();
-  const { theme } = useTheme();
-
-  if (!fonteCarregada) {
-    return <LoadingContainer />;
-  }
-
+function DetailsScreen() {
   return (
-    <StyledThemeProvider theme={theme}>
-      <Container>
-        <PrimeiraPagina />
-      </Container>
-    </StyledThemeProvider>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Details Screen</Text>
+    </View>
   );
-};
+}
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
