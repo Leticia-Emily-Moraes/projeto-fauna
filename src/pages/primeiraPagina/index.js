@@ -23,7 +23,7 @@ const PrimeiraPagina = ({ navigation }) => {
             <ContainerButtons>
                 <Button
                     title="Cadastre-se"
-                    onPress={() => navigation.navigate("CadastroUser")}
+                    onPress={() => navigation.navigate("CadastroDadosUser")}
                 />
                 <Button title="Entrar" />
                 <ContainerEntrarCom>
