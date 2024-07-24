@@ -40,6 +40,6 @@ export const ContainerButtonsEntrarCom = styled.View`
 
 export const TextoNormal = styled.Text`
   color: ${(props) => props.theme.colors.text};
-  font-family: "Inter-Bold";
+  font-family: 'Inter-Bold';
   font-size: 16px;
 `;

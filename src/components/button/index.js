@@ -1,9 +1,9 @@
 import React from 'react';
 import { ButtonPrincipal, ButtonText } from './style';
 
-function Button({ title }) {
+function Button({ title, onPress }) {
   return (
-    <ButtonPrincipal>
+    <ButtonPrincipal onPress={onPress}>
       <ButtonText>{title}</ButtonText>
     </ButtonPrincipal>
   );

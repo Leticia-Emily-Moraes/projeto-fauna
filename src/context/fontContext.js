@@ -1,29 +1,33 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useState, useEffect, useContext } from 'react';
 import * as Font from 'expo-font';
 
 const FonteContexto = createContext();
 
+const loadFonts = async () => {
+    await Font.loadAsync({
+        'Inter-Regular': require('../../assets/fonts/inter/Inter-Regular.ttf'),
+        'Inter-Bold': require('../../assets/fonts/inter/Inter-Bold.ttf'),
+    });
+};
+
 export const ProvedorFonte = ({ children }) => {
-    const [fonteCarregada, setFonteCarregada] = useState(false);
+    const [fontsLoaded, setFontsLoaded] = useState(false);
 
     useEffect(() => {
-        const carregarFontes = async () => {
-            await Font.loadAsync({
-                'Inter-Regular': require('../../assets/fonts/inter/Inter-Regular.ttf'),
-                'Inter-Bold': require('../../assets/fonts/inter/Inter-Bold.ttf'),
-            });
-            setFonteCarregada(true);
-        };
-        carregarFontes();
+        loadFonts().then(() => setFontsLoaded(true));
     }, []);
 
     return (
-        <FonteContexto.Provider value={{ fonteCarregada }}>
+        <FonteContexto.Provider value={{ fontsLoaded }}>
             {children}
         </FonteContexto.Provider>
     );
 };
 
 export const UseFonte = () => {
-    return useContext(FonteContexto);
-}
+    const context = useContext(FonteContexto);
+    if (!context) {
+        throw new Error('UseFonte deve ser usado dentro de um ProvedorFonte');
+    }
+    return context;
+};

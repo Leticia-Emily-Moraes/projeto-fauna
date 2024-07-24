@@ -15,7 +15,7 @@ import facebook from "../../../assets/imgs/facebook.png";
 import google from "../../../assets/imgs/google.png";
 import ToggleTheme from "../../components/toggleTheme";
 
-const PrimeiraPagina = () => {
+const PrimeiraPagina = ({ navigation }) => {
     return (
         <Container>
             <ToggleTheme />
@@ -23,7 +23,7 @@ const PrimeiraPagina = () => {
             <ContainerButtons>
                 <Button
                     title="Cadastre-se"
-                    // onPress={() => navigation.navigate("CadastroUser")}
+                    onPress={() => navigation.navigate("CadastroUser")}
                 />
                 <Button title="Entrar" />
                 <ContainerEntrarCom>
