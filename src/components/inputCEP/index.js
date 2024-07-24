@@ -7,6 +7,7 @@ function InputCEP({
     placeholder = "Digite Seu CEP",
     value = "",
     onChangeText = () => {},
+    onAddressFound = () => {},
     ...props
 }) {
     const [cep, setCep] = useState(value);
@@ -19,6 +20,7 @@ function InputCEP({
                 const addressData = await getAddress(cep);
                 setMessage("");
                 setIsValid(true);
+                onAddressFound(addressData);
                 return true;
             } catch (error) {
                 setMessage("CEP não encontrado");
