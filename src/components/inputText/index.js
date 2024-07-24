@@ -6,6 +6,7 @@ function InputText({
   placeholder = 'Digite aqui...',
   value = '',
   onChangeText = () => {},
+  isEditable = true,
   ...props
 }) {
   const [text, setText] = useState(value);
@@ -45,6 +46,7 @@ function InputText({
         placeholder={placeholder}
         value={text}
         onChangeText={handleTextChange}
+        editable={isEditable}
         {...props}
       />
       {!isValid && <TextError>{message}</TextError>}
