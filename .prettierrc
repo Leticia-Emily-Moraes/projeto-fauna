@@ -1,0 +1,6 @@
+{
+    "semi": true,
+    "useTabs": true,
+    "singleAttributePerLine": true,
+    "tabWidth": 4
+}
