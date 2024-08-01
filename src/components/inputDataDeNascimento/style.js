@@ -16,6 +16,12 @@ export const Label = styled.Text`
 	font-size: 16px;
 	align-self: flex-start;
 `;
+export const Placeholder = styled.Text`
+	color: ${(props) => props.theme.colors.text};
+	font-family: "Inter-Light";
+	font-size: 14px;
+	align-self: flex-start;
+`;
 
 export const TextError = styled.Text`
 	color: red;
@@ -23,11 +29,15 @@ export const TextError = styled.Text`
 	font-size: 16px;
 `;
 
-export const Input = styled.TextInput`
+export const ButtonSelect = styled.TouchableOpacity`
 	background-color: ${(props) => props.theme.colors.bgInput};
 	width: 100%;
 	height: 35px;
 	padding: 5px 25px;
 	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	color: ${(props) => props.theme.colors.text};
 `;
+
