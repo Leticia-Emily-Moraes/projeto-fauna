@@ -5,6 +5,7 @@ import CadastroDadosUser from "../pages/cadastroDadosUser";
 import CadastroUser from "../pages/cadastroUser";
 import CadastroEnderecoUser from "../pages/cadastroEnderecoUser";
 import EscolhaPerfil from "../pages/escolhaPerfil";
+import CadastroDadosPessoaisUser from "../pages/cadastroDadosPessoaisUser";
 const Stack = createStackNavigator();
 
 
@@ -12,7 +13,7 @@ const Stack = createStackNavigator();
 export function Router() {
     return (
         <Stack.Navigator
-            initialRouteName="PrimeiraPagina"
+            initialRouteName="CadastroDadosPessoaisUser"
             screenOptions={{ headerShown: false }}
         >
 
@@ -36,6 +37,10 @@ export function Router() {
             <Stack.Screen
                 name="CadastroEnderecoUser"
                 component={CadastroEnderecoUser}
+            />
+            <Stack.Screen
+                name="CadastroDadosPessoaisUser"
+                component={CadastroDadosPessoaisUser}
             />
         </Stack.Navigator>
     );
