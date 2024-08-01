@@ -8,7 +8,7 @@ const ToggleTheme = () => {
 
   return (
     <ButtonTheme onPress={toggleTheme}>
-      <Feather name={theme.icon.iconThemeName} color={theme.colors.iconThemeColor} size={25} />
+      <Feather name={theme.icon.iconThemeName} color={theme.colors.iconThemeColor} size={30} />
     </ButtonTheme>
   );
 };

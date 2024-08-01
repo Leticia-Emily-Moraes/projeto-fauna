@@ -26,6 +26,8 @@ function CadastroDadosUser({ navigation }) {
     const [confirmaSenha, setConfirmaSenha] = useState("");
     const [isSenhaValida, setIsSenhaValida] = useState(true);
     const [senhaErrorMessage, setSenhaErrorMessage] = useState("");
+    const [errorMensagem, setErrorMensagem] = useState("");
+
     const handleConfirmarSenhaChange = (text) => {
         setConfirmaSenha(text);
         if (text !== senha) {
@@ -36,9 +38,21 @@ function CadastroDadosUser({ navigation }) {
             setSenhaErrorMessage("");
         }
     };
+
+    const verificandoPreenchimento = () => {
+        if(!pNome || !sobrenome || !email || !senha || !confirmaSenha){
+            setErrorMensagem("Todos os campos devem estar preenchidos");
+            return;
+        }
+        if(isSenhaValida){
+            navigation.navigate("CadastroEnderecoUser");
+        }
+    }
+
     return (
         <Container>
             <TextoTitulo>Cadastre-se</TextoTitulo>
+            {errorMensagem && <TextError>{errorMensagem}</TextError>}
             <ContainerInputs>
                 <InputText
                     TituloDoInput="Primeiro nome:"
@@ -70,7 +84,7 @@ function CadastroDadosUser({ navigation }) {
                 />
                 {!isSenhaValida && <TextError>{senhaErrorMessage}</TextError>}
             </ContainerInputs>
-            <Button title="Cadastrar" />
+            <Button title="Cadastrar" onPress={verificandoPreenchimento}/>
             <ContainerEntrarCom>
                 <TextoNormal>Cadastrar com:</TextoNormal>
                 <ContainerButtonsEntrarCom>
